@@ -67,7 +67,15 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <plugin>
+                <groupId>io.dazraf</groupId>
+                <artifactId>vertx-hot-maven-plugin</artifactId>
+                <version>1.0.2</version>
+                <configuration>
+                    <verticleClassName>com.test.vertBlog.ServVerticle</verticleClassName>
+                    <configFile>src/main/conf/my-application-conf.json</configFile>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
