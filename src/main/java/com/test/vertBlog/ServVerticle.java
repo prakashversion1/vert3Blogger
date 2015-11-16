@@ -18,7 +18,7 @@ public class ServVerticle extends AbstractVerticle {
         router.route("/").handler(routingContext -> {
             HttpServerResponse response = routingContext.response();
             response.putHeader("content-type","text/html")
-                    .end("<h1>Hello from my first Vert.x 3 application</h1>");
+                    .end("<h1>Hello from my firsts Vert.x 3 application</h1>");
         });
 
         router.route("/assets/*").handler(StaticHandler.create("assets"));

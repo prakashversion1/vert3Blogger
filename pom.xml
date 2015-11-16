@@ -33,6 +33,17 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>io.dazraf</groupId>
+                <artifactId>vertx-hot-maven-plugin</artifactId>
+                <version>1.0.3</version>
+                <configuration>
+                    <verticleClassName>com.test.vertBlog.ServVerticle</verticleClassName>
+                    <configFile>config.json</configFile>
+                </configuration>
+            </plugin>
+
+
+            <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
                 <configuration>
@@ -67,17 +78,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>io.dazraf</groupId>
-                <artifactId>vertx-hot-maven-plugin</artifactId>
-                <version>1.0.2</version>
-                <configuration>
-                    <verticleClassName>com.test.vertBlog.ServVerticle</verticleClassName>
-                    <configFile>src/main/conf/my-application-conf.json</configFile>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
-
 
 </project>
